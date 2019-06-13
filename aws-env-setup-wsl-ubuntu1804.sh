@@ -28,7 +28,7 @@ install_aws_iam_authenticator () {
 	else
 		mkdir -p "$HOME"/bin && cp ./aws-iam-authenticator "$HOME"/bin/aws-iam-authenticator && export PATH="$HOME"/bin:"$PATH"
 	fi
-	echo "export PATH="$HOME"/bin:"$PATH"" >> ~/.bashrc
+	printf "export PATH=$HOME/bin:$PATH" >> ~/.bashrc
 	#now test to make sure it's working as expected
 	aws-iam-authenticator help &>/dev/null && echo "aws-iam-authenticator successfully installed"
 }
