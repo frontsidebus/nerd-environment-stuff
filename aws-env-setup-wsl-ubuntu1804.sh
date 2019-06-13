@@ -22,7 +22,7 @@ install_aws_cli () {
 install_aws_iam_authenticator () {
 	curl -o aws-iam-authenticator $AUTHENTICATOR_BIN_URL
 	chmod 755 ./aws-iam-authenticator
-	if [ -d "$HOME/bin"]
+	if [ -d "$HOME/bin" ]
 	then
 		cp ./aws-iam-authenticator $HOME/bin/aws-iam-authenticator && export PATH=$HOME/bin:$PATH
 	else
